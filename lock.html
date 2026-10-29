@@ -1,0 +1,27 @@
+<html>
+    <body style="margin: 0px; overflow: hidden;  scrollbar-width: none; -ms-overflow-style: none; background-image: url(wallpaperlockscreen.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; overscroll-behavior: none;">
+       <center>
+        <div class="timendate" style="width: 100%;">
+<div id="time">00:00</div>
+<div id="date">Day, Mon XX</div>
+        </div>
+       </center>
+       <script>
+        function updateClock() {
+            const now = new Date();
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('time').innerText = `${hours}:${minutes}`;
+
+            const options = { weekday: 'short', month: 'short', day: 'numeric' };
+            document.getElementById('date').innerText = now.toLocaleDateString(undefined, options);
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+        </script>
+    </body>
+</html>
