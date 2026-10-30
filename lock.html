@@ -1,9 +1,20 @@
 <html>
+    <link rel="stylesheet" href="universal.css">
     <body style="margin: 0px; overflow: hidden;  scrollbar-width: none; -ms-overflow-style: none; background-image: url(wallpaperlockscreen.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; overscroll-behavior: none;">
        <center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="timendate" style="width: 100%;">
-<div id="time">00:00</div>
-<div id="date">Day, Mon XX</div>
+<div style="font-family: 'SamsungSharpSans'; line-height: 0.8; font-size: 200px; color: #d9f4ff83;" id="time">00 00</div>
+<div style="font-family: 'SamsungOne-400'; font-size: 38px; color: #d9f4ff83;" id="date">Day, Mon XX</div>
         </div>
        </center>
        <script>
@@ -14,10 +25,13 @@
             let minutes = now.getMinutes();
 
             minutes = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById('time').innerText = `${hours}:${minutes}`;
+            document.getElementById('time').innerHTML = `${hours}<br>${minutes}`;
 
-            const options = { weekday: 'short', month: 'short', day: 'numeric' };
-            document.getElementById('date').innerText = now.toLocaleDateString(undefined, options);
+            const options = { weekday: 'short', month: 'short' };const dayName = now.toLocaleDateString(undefined, { weekday: 'short' });
+            const dayNum = now.getDate();
+            const monthName = now.toLocaleDateString(undefined, { month: 'long' });
+
+    document.getElementById('date').innerText = `${dayName} ${dayNum} ${monthName}`;
         }
 
         updateClock();
