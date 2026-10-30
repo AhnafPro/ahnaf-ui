@@ -1,6 +1,9 @@
 
 To talk about the project itself, I am planning to make a lightweight handheld PC in a phone form factor since RPI02W has limited processing power I just cannot really throw a full linux desktop there so I'm making my own UI which I will integrate through 
 
+### 📝 Designs to date and time, and adding of Wifi/Battey indicator  - 30/10/2026
+Worked a lot today honestly even though the changes were quite minor. I added proper CSS to the date and time, and also to the newly added wifi and battery indicator. I am trying my best to get that Samsung's One UI look as I have also downlaoded 3 varients of their font for further use. For now the wifi and battery is not functional because I researched and found out that these things won't work on pywebview out of box cuz they run on GTK and that too we are implementing on a Linux distro. So we need some python workaround which will be handeld in a sub-project of this (after ending this project).
+
 ### 📝 Custom lockscreen with date and time - 29/10/2026
 I got a nice wallpaper for the newly made lockscreen. Though it is in a low quality, it was made to match the acutal resolution of the screen and not only for the screen but optimizations are quite neccesary from the beginning to squeeze every bit of performance out of the tiny RPI02W. And I was also planning on getting an Orange PI Zero 2W (1.5 GB RAM) to run better and much more stuffs that the 2W cannot, I'll do it after this project ends + assembly of all the hardware is done with some proper testing.
 
