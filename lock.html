@@ -1,7 +1,13 @@
 <html>
     <link rel="stylesheet" href="universal.css">
-    <body style="margin: 0px; overflow: hidden;  scrollbar-width: none; -ms-overflow-style: none; background-image: url(wallpaperlockscreen.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; overscroll-behavior: none;">
-       <center>
+    <body style="margin: 0px; overflow: hidden;  scrollbar-width: none; -ms-overflow-style: none; background-image: url(lockscreenwallpaper.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; overscroll-behavior: none;overflow-x: hidden;">
+        <br style="line-height: 0.5;">
+<div class="notifbar" style="width: 100%; max-height: 50px; background-color: rgba(0, 0, 0, 0); overflow: hidden; display: flex; justify-content: flex-end; gap: 10px; align-items: flex-end;">            
+            <img style="filter: brightness(0) invert(1);" src="wifiicon.png"> <!--I have to integrate python backend with js to make wifi/battery indicator work-->
+            <div style="width: 80px; background: rgba(255, 255, 255, 0.622); height: 50px; border-radius: 50px;"></div>
+            <br>
+        </div>
+        <center>
         <br>
         <br>
         <br>
@@ -13,7 +19,7 @@
         <br>
         <br>
         <div class="timendate" style="width: 100%;">
-<div style="font-family: 'SamsungSharpSans'; line-height: 0.8; font-size: 200px; color: #d9f4ff83;" id="time">00 00</div>
+<div style="font-family: 'SamsungSharpSans'; line-height: 0.8; font-size: 200px; color: #d9f4ff83; font-weight: 900;" id="time">00 00</div>
 <div style="font-family: 'SamsungOne-400'; font-size: 38px; color: #d9f4ff83;" id="date">Day, Mon XX</div>
         </div>
        </center>
